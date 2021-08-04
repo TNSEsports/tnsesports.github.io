@@ -3,6 +3,14 @@
     margin: 0%;
     padding: 0%;
     font-family: 'Montserrat', sans-serif;
+
+    color: #fff;
+
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    font-size: 15px;
+    font-style: normal;
+    text-transform: uppercase;
 }
 
 body{
@@ -100,6 +108,7 @@ li a{
 
 h1{
     margin-bottom: 0.5rem;
+    font-size: xx-large;
 }
 
 a{
@@ -110,6 +119,7 @@ a{
 .btn{
     padding: 1rem;
     margin-bottom: 1rem;
+    color: black;
 }
 
 .members{
