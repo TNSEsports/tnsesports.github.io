@@ -15,16 +15,23 @@ layout: default
     type="video/mp4">
 </video>
 
+<div class="space"></div>
+<h3 id="hide">This link was a joke, to actually apply please click the 'APPLY' button in the navbar</h3>
+
 <script defer>
     document.addEventListener('DOMContentLoaded', () => {
         var rickRoll = document.getElementById('rickRoll')
         rickRoll.style.display = 'none'
+
+        document.getElementById('hide').style.display = 'none'
 
     })
 
     function startRickroll(){
         var rickRoll = document.getElementById('rickRoll')
         rickRoll.style.display = 'block'
+
+        document.getElementById('hide').style.display = 'block'
         
         rickRoll.play()
 

@@ -7,12 +7,16 @@ layout: default
 <div class="members">
 
     {% for member in site.data.members %}
-
+    <a href="/member?displayName={{ member[1].displayName }}&displayPfp={{ member[1].displayProfilePic }}">
         <div class="member">
-            <h3>{{ member.displayName }}</h3>
-            <img src="{{ member.displayProfilePic }}" alt="pfp">
+                <h3>{{ member[1].displayName }}</h3>
+                <img src="{{ member[1].displayProfilePic }}" alt="pfp">
         </div>
-
+    </a>
+            
     {% endfor %}
+</div>
 
+<div>
+    Want your name here? Apply now at <a href="/enroll">to join the TNS esports group</a>
 </div>

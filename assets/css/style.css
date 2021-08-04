@@ -102,6 +102,11 @@ h1{
     margin-bottom: 0.5rem;
 }
 
+a{
+    text-decoration: underline;
+    color: #fff;
+}
+
 .btn{
     padding: 1rem;
     margin-bottom: 1rem;
@@ -116,6 +121,10 @@ h1{
     justify-content: space-around;
 
     margin-bottom: 1rem;
+}
+
+.members a{
+    text-decoration: none;
 }
 
 .member{
@@ -162,3 +171,7 @@ h1{
     margin-left: auto;
     padding-right: 1rem;
 } 
+
+.space{
+    margin: 0.5rem;
+}

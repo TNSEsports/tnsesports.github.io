@@ -1,0 +1,28 @@
+---
+title: Member
+layout: default
+---
+
+<h1 id="userName"></h1>
+<img src="" alt="pfp" id="pfp">
+
+<script defer>
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+
+    const member = urlParams.get('member')
+
+    // Set Username
+    document.getElementById('userName').innerText = urlParams.get('displayName')
+
+    var pfp = decodeURI(urlParams.get('displayPfp'))
+
+    pfp = pfp.replaceAll('?', '%3F')
+    pfp = pfp.replaceAll('=', '%3D')
+    pfp = pfp.replaceAll('&', '%26')
+    
+    console.log(pfp)
+
+    document.getElementById('pfp').src = decodeURI(pfp)
+    
+</script>
