@@ -11,12 +11,15 @@
     font-size: 15px;
     font-style: normal;
     text-transform: uppercase;
+
+
+    --background-colour: #2C3E50;
 }
 
 body{
     /* overflow: hidden; */
     overflow-x: hidden;
-    background-color: #353b48;
+    background-color: var(--background-colour);
 }
  
 nav{
