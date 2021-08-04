@@ -3,26 +3,115 @@ title: Member
 layout: default
 ---
 
-<h1 id="userName"></h1>
-<img src="" alt="pfp" id="pfp">
+<style>
+    .profileDetails{
+        /* margin-right: auto;
+        margin-left: 1rem; */
+
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .profileDetails img{
+        border-radius: 50%;
+    }
+
+    .clips{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        justify-content: center;
+    }
+
+    .clip{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+</style>
+
+<div class="profileDetails">
+    <h1 id="userName"></h1>
+    <img src="" alt="pfp" id="pfp">
+</div>
+
+<div class="clips" id="clipsContainer"></div>
+
+<div class="space"></div>
+
+<div class="medalPlug">
+    See more clips from <span id="username"></span> on <a href="" id="medalPlug">Medal</a>
+</div>
 
 <script defer>
+    // Get query params
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
 
-    const member = urlParams.get('member')
-
     // Set Username
     document.getElementById('userName').innerText = urlParams.get('displayName')
+    document.getElementById('username').innerText = urlParams.get('displayName')
 
     var pfp = decodeURI(urlParams.get('displayPfp'))
 
+    // Encode the like again because fucking dyno uses links weidly
     pfp = pfp.replaceAll('?', '%3F')
     pfp = pfp.replaceAll('=', '%3D')
     pfp = pfp.replaceAll('&', '%26')
     
-    console.log(pfp)
-
+    // Set image
     document.getElementById('pfp').src = decodeURI(pfp)
+
+
+    // Medal stuff
+
+    var apiKey = 'pub_LXXnRrfvXPirp7DHt9eRI8Yald5z81Qe'
+
+    var medalId = urlParams.get('medalId')
+
+    var url = `https://developers.medal.tv/v1/latest?userId=${medalId}&limit=2`
+
+    console.log(medalId)
+
+    fetch(url, {
+        method: "GET",
+        headers: {
+            "Authorization": apiKey
+        }
+    }).then(data => {
+        data.json().then(jsonData => {
+
+            let clips = jsonData.contentObjects
+
+            if(clips.length == 0){          
+                // If there are no clips display this instead
+
+                var clipDiv = document.createElement('h1')
+                clipDiv.innerText = "No Clips to show ;-;"
+                clipDiv.classList.add('clip')
+
+                document.getElementById('clipsContainer').appendChild(clipDiv)
+            }
+            else{
+                for (i = 0; i < clips.length; i++){
+                    let clip = clips[i]
     
+                    // Create div
+                    var clipDiv = document.createElement('div')
+                    clipDiv.innerHTML = clip.embedIframeCode
+                    clipDiv.classList.add('clip')
+                    
+                    // Add div to document
+                    document.getElementById('clipsContainer').appendChild(clipDiv)
+    
+                }
+            }
+            
+            // Set medal plug link
+            document.getElementById('medalPlug').href = `https://medal.tv/users/${medalId}`
+
+        })
+    })
 </script>
+
