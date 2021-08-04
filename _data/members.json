@@ -1,37 +1,42 @@
-{
-    "hamuzaDesu": {
+[
+    {
         "displayName": "HamuzaDesu",
         "displayProfilePic": "https://images-ext-1.discordapp.net/external/p-IZ-XfWjt0lpKxNQpQef-P_Fvl64byneSGkT6cwK-c/%3Fsize%3D256%26f%3D.gif/https/cdn.discordapp.com/avatars/784923259979563018/a_1f3bc693e8704474c829868c46a9e8be.gif",
         "medalUserID": "16560470"
     },
-    "donutMan": {
+    {
         "displayName": "DonutMan",
         "displayProfilePic": "https://images-ext-2.discordapp.net/external/x1rIPbkXapkxPjWsyr3yBXcg_6C05TfIh982_Txz4O0/%3Fsize%3D256/https/cdn.discordapp.com/avatars/319897681579212801/11bdb8c4be817bd3c175f0b67ccbde63.png",
         "medalUserID": "19206274"
     },
-    "artemis": {
+    {
         "displayName": "Artemis",
         "displayProfilePic": "https://images-ext-1.discordapp.net/external/dEEQfn5ufS9oMJNyUBfr2f9fU0saAhx93xb_icDyxkw/%3Fsize%3D256/https/cdn.discordapp.com/avatars/398937785219940352/8dd97921c26845c2a80da8f9d3f006a7.png",
         "medalUserID": "18427172"
     },
-    "affable": {
+    {
         "displayName": "Affable",
         "displayProfilePic": "https://images-ext-1.discordapp.net/external/yL7iSMieekLV4s9n54TSCDhAU788kl37FtJML4l3ujE/%3Fsize%3D256/https/cdn.discordapp.com/avatars/537895974157156362/612ec1ac1a06ca2075c411532f5d2631.png",
         "medalUserID": "16505326"
     },
-    "dmf234": {
+    {
         "displayName": "DMF234",
         "displayProfilePic": "https://images-ext-1.discordapp.net/external/LOKIn0bkxFKj4kUuJt1dt5_QHGYPlKe6-4qZ70vvXdU/%3Fsize%3D256/https/cdn.discordapp.com/avatars/667762204174581761/89f95ac63792775d6020ad315aa38f06.png",
         "medalUserID": "16506884"
     },
-    "pulsar": {
+    {
         "displayName": "Pulsar",
         "displayProfilePic": "https://images-ext-2.discordapp.net/external/SH6cc8NlaNRwUg8mwMORqTQYiQ1g5ksr1yFp8hyf0Tg/%3Fsize%3D256/https/cdn.discordapp.com/avatars/748939114707026030/3750e3d7fea4e89af30f747938ef3cff.png",
         "medalUserID": "18483413"
     },
-    "cole": {
+    {
         "displayName": "Cole",
         "displayProfilePic": "https://images-ext-1.discordapp.net/external/AjVnuKLmgB5P0dnRut7FSvKmurRQexsL6Wuahmmbg4U/%3Fsize%3D256/https/cdn.discordapp.com/avatars/637178771543425044/3688b87e3354f25a39d02361a8f778f9.png",
         "medalUserID": "21994419"
+    },
+    {
+        "displayName": "ProngedTundra25",
+        "displayProfilePic": "https://images-ext-1.discordapp.net/external/gFMt3LJz86EedzCCqIZImS8Z7h-BPP4aEnCY2zYjZtM/%3Fsize%3D256/https/cdn.discordapp.com/avatars/668842320447275038/099c3cd1d94da18ee59d7bc1c408446c.png",
+        "medalUserID": "00000"
     }
-}
+]

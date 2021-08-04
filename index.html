@@ -7,10 +7,10 @@ layout: default
 <div class="members">
 
     {% for member in site.data.members %}
-    <a href="/member?displayName={{ member[1].displayName }}&displayPfp={{ member[1].displayProfilePic }}&medalId={{ member[1].medalUserID }}">
+    <a href="/member?displayName={{ member.displayName }}&displayPfp={{ member.displayProfilePic }}&medalId={{ member.medalUserID }}">
         <div class="member">
-                <h3>{{ member[1].displayName }}</h3>
-                <img src="{{ member[1].displayProfilePic }}" alt="pfp">
+                <h3>{{ member.displayName }}</h3>
+                <img src="{{ member.displayProfilePic }}" alt="pfp">
         </div>
     </a>
             
