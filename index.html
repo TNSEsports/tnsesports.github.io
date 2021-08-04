@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TNS Esports</title>
+---
+title: Home
+layout: default
+---
+<h1>The TNS Esports Team</h1>
 
-    <link rel="stylesheet" href="style.css">
+<div class="members">
 
-</head>
-<body>
-    <nav>
-        
-    </nav>
-    <div class="screen">
-        <h1>TNS Esports</h1>
-        <p>This website is still in development, please come back soon!</p>
-        <small>In loving memory of Sir George TNS (1886-1887)</small>
-    </div>
+    {% for member in site.data.members %}
 
-    <script src="index.js"></script>
-</body>
-</html>
+        <div class="member">
+            <h3>{{ member.displayName }}</h3>
+            <img src="{{ member.displayProfilePic }}" alt="pfp">
+        </div>
+
+    {% endfor %}
+
+</div>
