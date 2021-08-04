@@ -3,10 +3,30 @@ title: "Roll "
 layout: default
 ---
 
-<iframe width="560" 
-height="315" 
-src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?&autoplay=1" 
-title="YouTube video player" 
-frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
+
+<h1>Enroll for TNS Here</h1>
+
+
+<button class="btn" id="startRickroll" onclick="startRickroll()">Please Press button to enroll</button>
+
+<video autoplay id="rickRoll" >
+    <source 
+    src="/assets/videos/Rick Astley - Never Gonna Give You Up (Video).mp4"
+    type="video/mp4">
+</video>
+
+<script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+        var rickRoll = document.getElementById('rickRoll')
+        rickRoll.style.display = 'none'
+
+    })
+
+    function startRickroll(){
+        var rickRoll = document.getElementById('rickRoll')
+        rickRoll.style.display = 'block'
+        
+        rickRoll.play()
+
+    }
+</script>
